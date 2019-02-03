@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Content!</title>
+
+</head>
+<body>
+
+  <h1>hangman!</h1>
+  <hr>
+    <div id="word"> </div>
+ 
+
+  <script type="text/javascript">
+
+    var randomWordArr = ["casa", "perro", "gato", "cosa"];
+    var randomWord = randomWordArr[Math.floor(Math.random() * randomWordArr.length)];
+    var Wordlength = randomWord.length;
+    var display = [Wordlength];
+    var win = Wordlength;
+    var letters = randomWord.split('');
+    var attemptsLeft = 15;
+    var output = " ";
+    var userLetter = "";
+    let userpick = [];
+    var pauseGame = false
+
+    
+
+
+    function startUp(){
+        for (var i = 0; i <randomWord.length; i++){
+            display[i] = "_ ";
+            output = output + display[i];
+            console.log(output);
+            console.log(randomWord);
+        }
+         document.getElementById("word").innerHTML = output;
+        output = "";   
+    }
+    startUp()
+
+   // function guessing(){
+  //      output = "";
+   //     userLetter=$("letter").value;
+     //   $le
+    //}
+   
+
+
+
+  </script>
+
+</body>
+</html>
